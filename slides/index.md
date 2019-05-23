@@ -1,17 +1,18 @@
-- title : SAFE apps with F# web stack
+- title : Full Stack Web in F#
 - author : Tomasz Heimowski
 - theme : night
 - transition : default
 
 ***
 
-<img src="images/safe_top.png" style="background: transparent; border: none; box-shadow: none"  />
 
-# apps
+## Full Stack Web
 
-## with <span style="color: #e7ad52;">F#</span> web stack
+# in <span style="color: #e7ad52;">F#</span>
 
-Tomasz Heimowski http://theimowski.com
+Tomasz Heimowski 
+
+http://theimowski.com
 
 <img src="images/twitter.png" style="width:48px; background: transparent; border: none; box-shadow: none"  />
 <img src="images/github.png" style="width:48px; background: transparent; border: none; box-shadow: none"  /> 
@@ -20,27 +21,15 @@ Tomasz Heimowski http://theimowski.com
 
 ***
 
-## Agenda
+## Full Stack Web
 
-* F#
-* SAFE
-* **Demo**
-* Q&A
+---
 
-Slides available at 
+## TODO MVC
 
-http://theimowski.com/talk-safe-stack
+http://todomvc.com/
 
-***
-
-- data-background : images/confused.gif
-
-# Disclaimer
-
-
-***
-
-# My goal
+https://www.todobackend.com/
 
 ***
 
@@ -56,53 +45,7 @@ http://theimowski.com/talk-safe-stack
 
 ***
 
-<img src="images/safe_top.png" style="background: transparent; border: none; box-shadow: none"  />
-
-# ???
-
-***
-
-![Mean](images/mean.png)
-
-<small>https://www.troofal.com/services/mean-stack</small>
-
-***
-
-![LAMP](images/lamp.jpg)
-
-<small>https://www.programmableweb.com/news/what-mean-stack-and-why-it-better-lamp/analysis/2015/12/22</small>
-
-***
-
-![LAMP](images/lamp_better.jpg)
-
-<small>https://www.unixmen.com/how-to-install-lamp-stack-ubuntu-17-04</small>
-
-***
-
-![PHP_LOL](images/twitter_php.png)
-
-<small>https://twitter.com/krisajenkins/status/903988761171820544</small>
-
-***
-
-- data-background : images/4CATS.jpg
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-## CATS
-
-### (Typical MS Stack)
-
-<img src="images/CSHARP.jpeg" style="width: 200px; background: transparent; border: none; box-shadow: none"  />
-<img src="images/ASPNET.gif" style="width: 200px; background: white; border: none; box-shadow: none"  />
-<img src="images/TYPESCRIPT.svg" style="width: 200px; background: none; border: none; box-shadow: none"  />
-<img src="images/SQLSERVER.png" style="width: 200px; background: white; border: none; box-shadow: none"  />
-
+<img src="images/safe_stack.png" style="background: transparent; border: none; box-shadow: none" />
 
 
 ***
@@ -124,6 +67,33 @@ https://safe-stack.github.io
 
 ***
 
+## Prerequisites
+
+* [.NET SDK 2.2](https://www.microsoft.com/net)
+* [FAKE 5](https://fake.build/) (global dotnet tool)
+* [Node.js](https://nodejs.org/)
+* [Yarn](https://yarnpkg.com/) or [NPM](https://www.npmjs.com/)
+
+<br/>
+<br/>
+
+#### or
+
+* [Docker](https://www.docker.com)
+* [VS Code Insiders](https://code.visualstudio.com/insiders/)
+* [VS Code Remote Containers](https://code.visualstudio.com/docs/remote/containers)
+
+***
+
+## Creating SAFE project
+
+* Install SAFE template: `dotnet new -i SAFE.Template`
+* Create project from template: `dotnet new SAFE`
+* Build & run: `fake build --target run`
+* Wait for build to finish: app opens up in browser
+
+***
+
 <img src="images/safe_s.png" style="background: transparent; border: none; box-shadow: none"  />
 
 ## <span style="color: #e7ad52;">S</span> for <span style="color: #e7ad52;">S</span>aturn<span>
@@ -134,7 +104,6 @@ https://saturnframework.org/
 
 * **Web server**
 * ASP.NET Core, Kestrel
-* MVC pattern
 
 ***
 
@@ -147,6 +116,25 @@ https://saturnframework.org/
 https://azure.microsoft.com
 
 * **Cloud** provider
+
+---
+
+<img src="images/azure_square.png" style="width: 200px; background: white"  />
+<img src="images/google_cloud.png" style="width: 200px; background: white"  />
+<img src="images/k8s.png" style="width: 205px; background: white"  />
+<br/>
+<img src="images/IIS.png" style="width: 210px; background: white"  />
+<img src="images/docker.png" style="width: 210px; background: white"  />
+<img src="images/heroku.png" style="width: 200px; background: white"  />
+
+
+
+1. Azure AppService
+1. Google Cloud AppEngine
+1. Google Cloud Kubernetes Engine
+1. IIS
+1. Docker
+1. Heroku
 
 ***
 
@@ -180,100 +168,49 @@ https://elmish.github.io
 
 ***
 
-- data-background : images/demo_overview.png
+<img src="images/safe_top.png" style="background: transparent; border: none; box-shadow: none"  />
+
+## practical benefits
+
+</br> 
+
+* one language to rule them all
+* after learning F# it's **really** easy to use!
+* rich template with plenty options
+* development experience taken to the next level
+* Microsoft involvement
+* community & commercial support
 
 ***
 
-![demo_mobile](images/demo_mobile.png)
 
-***
+<img src="images/safe_top.png" style="background: transparent; border: none; box-shadow: none"  />
 
-![demo_mobile](images/demo_mobile_results.png)
+## what's more?
 
-***
-
-## Creating SAFE project
-
-#### Prerequisites:
-
-* [.NET SDK 2.1](https://www.microsoft.com/net)
-* [FAKE 5](https://fake.build/) as global .NET tool
-* [Node.js](https://nodejs.org/)
-* [Yarn](https://yarnpkg.com/) or [NPM](https://www.npmjs.com/)
-
-***
-
-## Creating SAFE project
-
-* Install SAFE template: `dotnet new -i SAFE.Template`
-* Create project from template: `dotnet new SAFE`
-* Build & run: `fake build --target run`
-* Wait for build to finish: app opens up in browser
-
-***
-
-## Architecture
-
-* Shared code
-  * [Fable.Remoting](https://github.com/Zaid-Ajaj/Fable.Remoting)
-* Server side
-  * [Saturn](https://saturnframework.org/)
-* Client side
-  * [Fable](http://fable.io/)
-  * [Elmish](https://fable-elmish.github.io/elmish/)
-  * [React](https://reactjs.org/)
-
-***
-
-## Building form
-
-* [Bulma](https://bulma.io/) (CSS Framework)
-* [Fulma](https://github.com/MangelMaxime/Fulma) - Bulma bindings for Elmish
-* [Landing Bulma Template](https://dansup.github.io/bulma-templates/)
-* [Webpack](https://webpack.js.org) + [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
-
-***
-
-## Client side debugging
-
-* Binding in "Elm Architecture" style
-* Console trace
-* Hot Module Replacement 
-* [Redux-devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) (Time-travel debugger)
-* [React-devtools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-
-***
-
-## Talking to server side
-
-* [Fable.Remoting](https://github.com/Zaid-Ajaj/Fable.Remoting)
-* Server refresh (dotnet watch)
-* Triggering calls from Client side
-
-***
-
-## Deploying the app
-
-* Bundle
-* Azure Resource Manager (ARM) Template
-* Azure App Service
+* [Sharing code](https://safe-stack.github.io/docs/feature-clientserver/) between Server and Client
+* [Full Stack Debugging in VS Code](https://safe-stack.github.io/docs/feature-debugging/)
+* [Server-Side Rendering](https://safe-stack.github.io/docs/feature-ssr/) - Back-end React
+* [ThoughtWorks Technology radar](https://www.thoughtworks.com/radar/languages-and-frameworks/safe-stack)
+* Number of podcasts and [events](https://safe-stack.github.io/docs/events/) appearances
+* ...
 
 ***
 
 <img src="images/safe_top.png" style="background: transparent; border: none; box-shadow: none"  />
 
 
-## Next steps
+## resources
 
-* [SAFE Docs](https://safe-stack.github.io/docs/) - SAFE in a nutshell
-* Example apps
-  * [SAFE BookStore](https://github.com/SAFE-Stack/SAFE-BookStore) - More complex + tests
-  * [SAFE Nightwatch](https://github.com/SAFE-Stack/SAFE-Nightwatch) - React Native
-  * [SAFE Chat](https://github.com/SAFE-Stack/SAFE-Chat) - Akka.NET
-  * [SAFE ConfPlanner](https://github.com/SAFE-Stack/SAFE-ConfPlanner) - CQRS + Event-Sourcing
-* [Server-Side Rendering](https://github.com/fable-compiler/fable-react/blob/master/docs/server-side-rendering.md#five-steps-to-enable-server-side-rendering-in-your-elmish--dotnet-app) - Back-end React
-* You?
+* [Docs](https://safe-stack.github.io/docs/) - SAFE in a nutshell
+* [Template](https://github.com/SAFE-Stack/SAFE-template/) - dotnet template (>23K NuGet downloads)
+* Deep dive demo from [F# eXchange '18](https://skillsmatter.com/skillscasts/11308-safe-apps-with-f-web-stack) (video)
+* Sample apps
+    * [BookStore](https://github.com/SAFE-Stack/SAFE-BookStore) - More complex + tests
+    * [Nightwatch](https://github.com/SAFE-Stack/SAFE-Nightwatch) - React Native
+    * [Chat](https://github.com/SAFE-Stack/SAFE-Chat) - Akka.NET
+    * [ConfPlanner](https://github.com/SAFE-Stack/SAFE-ConfPlanner) - CQRS + Event-Sourcing
 
-Slides: http://theimowski.com/talk-safe-stack
+Slides: https://theimowski.com/talk-full-stack-web-in-fsharp
 
 ***
