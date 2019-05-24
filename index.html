@@ -1,0 +1,268 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Full Stack Web in F#</title>
+    <meta name="description" content="">
+    <meta name="author" content="Tomasz Heimowski">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="//code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="//code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+    <link type="text/css" rel="stylesheet" href="fsharp.formatting/styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="fsharp.formatting/styles/deedle.css" />
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+    <script src="fsharp.formatting/styles/tips.js" type="text/javascript"></script>
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/fsreveal.css">
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <script language="javascript" type="text/javascript">
+        function init()
+        {
+            websocket = new WebSocket("ws://"+window.location.host+"/websocket");
+            websocket.onmessage = function(evt) { location.reload(); };
+        }
+        window.addEventListener("load", init, false);
+    </script>
+</head>
+<body>
+    <div class="reveal">
+        
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section >
+<h2>Full Stack Web</h2>
+<h1>in <span style="color: #e7ad52;">F#</span></h1>
+<p>Tomasz Heimowski</p>
+<p><a href="http://theimowski.com">http://theimowski.com</a></p>
+<img src="images/twitter.png" style="width:48px; background: transparent; border: none; box-shadow: none"  />
+<img src="images/github.png" style="width:48px; background: transparent; border: none; box-shadow: none"  /> 
+<p><em>@theimowski</em></p>
+</section>
+<section >
+<section >
+<h2>Full Stack Web</h2>
+</section>
+<section >
+<h2>TODO MVC</h2>
+<p><a href="http://todomvc.com/">http://todomvc.com/</a></p>
+<p><a href="https://www.todobackend.com/">https://www.todobackend.com/</a></p>
+</section>
+</section>
+<section >
+<h1>F#</h1>
+<p><img src="images/fsharp256.png" alt="F#" /></p>
+<ul>
+<li>Microsoft origin, OSS</li>
+<li><strong>General</strong> purpose</li>
+<li>Functional-first</li>
+<li>.NET / Mono / .NET Core / Web <strong>browser</strong></li>
+<li><a href="https://fsharp.org/">https://fsharp.org/</a></li>
+</ul>
+</section>
+<section >
+<img src="images/safe_stack.png" style="background: transparent; border: none; box-shadow: none" />
+</section>
+<section >
+<img src="images/safe_top.png" style="background: transparent; border: none; box-shadow: none"  />
+<h2>big picture</h2>
+</br> 
+<ul>
+<li>Web stack</li>
+<li>Combines several OSS projects</li>
+<li>F# end-to-end</li>
+<li>Type-SAFE</li>
+<li>Cloud-ready</li>
+<li>Flexible</li>
+</ul>
+<p><a href="https://safe-stack.github.io">https://safe-stack.github.io</a></p>
+</section>
+<section >
+<h2>Prerequisites</h2>
+<ul>
+<li><a href="https://www.microsoft.com/net">.NET SDK 2.2</a></li>
+<li><a href="https://fake.build/">FAKE 5</a> (global dotnet tool)</li>
+<li><a href="https://nodejs.org/">Node.js</a></li>
+<li><a href="https://yarnpkg.com/">Yarn</a> or <a href="https://www.npmjs.com/">NPM</a></li>
+</ul>
+<br/>
+<br/>
+<h4>or</h4>
+<ul>
+<li><a href="https://www.docker.com">Docker</a></li>
+<li><a href="https://code.visualstudio.com/insiders/">VS Code Insiders</a></li>
+<li><a href="https://code.visualstudio.com/docs/remote/containers">VS Code Remote Containers</a></li>
+</ul>
+</section>
+<section >
+<h2>Creating SAFE project</h2>
+<ul>
+<li>Install SAFE template: <code>dotnet new -i SAFE.Template</code></li>
+<li>Create project from template: <code>dotnet new SAFE</code></li>
+<li>Build &amp; run: <code>fake build --target run</code></li>
+<li>Wait for build to finish: app opens up in browser</li>
+</ul>
+</section>
+<section >
+<img src="images/safe_s.png" style="background: transparent; border: none; box-shadow: none"  />
+<h2><span style="color: #e7ad52;">S</span> for <span style="color: #e7ad52;">S</span>aturn<span></h2>
+<img src="images/saturn.png" style="background: transparent; border: none; box-shadow: none" width="100" />
+<p><a href="https://saturnframework.org/">https://saturnframework.org/</a></p>
+<ul>
+<li><strong>Web server</strong></li>
+<li>ASP.NET Core, Kestrel</li>
+</ul>
+</section>
+<section >
+<section >
+<img src="images/safe_a.png" style="background: transparent; border: none; box-shadow: none"  />
+<h2><span style="color: #e7ad52;">A</span> for <span style="color: #e7ad52;">A</span>zure <span></h2>
+<img src="images/azure.png" style="background: transparent; border: none; box-shadow: none" width="180" />
+<p><a href="https://azure.microsoft.com">https://azure.microsoft.com</a></p>
+<ul>
+<li><strong>Cloud</strong> provider</li>
+</ul>
+</section>
+<section >
+<img src="images/azure_square.png" style="width: 200px; background: white"  />
+<img src="images/google_cloud.png" style="width: 200px; background: white"  />
+<img src="images/k8s.png" style="width: 205px; background: white"  />
+<br/>
+<img src="images/IIS.png" style="width: 210px; background: white"  />
+<img src="images/docker.png" style="width: 210px; background: white"  />
+<img src="images/heroku.png" style="width: 200px; background: white"  />
+<ol>
+<li>Azure AppService</li>
+<li>Google Cloud AppEngine</li>
+<li>Google Cloud Kubernetes Engine</li>
+<li>IIS</li>
+<li>Docker</li>
+<li>Heroku</li>
+</ol>
+</section>
+</section>
+<section >
+<img src="images/safe_f.png" style="background: transparent; border: none; box-shadow: none"  />
+<h2><span style="color: #e7ad52;">F</span> for <span style="color: #e7ad52;">F</span>able <span></h2>
+<img src="images/fable_only_letter.png" style="background: transparent; border: none; box-shadow: none" width="100" />
+<p><a href="http://fable.io">http://fable.io</a></p>
+<ul>
+<li>F# to <strong>JavaScript compiler</strong></li>
+<li>Babel JS</li>
+</ul>
+</section>
+<section >
+<img src="images/safe_e.png" style="background: transparent; border: none; box-shadow: none"  />
+<h2><span style="color: #e7ad52;">E</span> for <span style="color: #e7ad52;">E</span>lmish <span></h2>
+<img src="images/elmish.png" style="background: transparent; border: none; box-shadow: none" width="140" />
+<p><a href="https://elmish.github.io">https://elmish.github.io</a></p>
+<ul>
+<li><strong>UI library</strong></li>
+<li>inspired by Elm</li>
+</ul>
+</section>
+<section >
+<img src="images/safe_stack.png" style="background: transparent; border: none; box-shadow: none" />
+</section>
+<section >
+<img src="images/safe_top.png" style="background: transparent; border: none; box-shadow: none"  />
+<h2>practical benefits</h2>
+</br> 
+<ul>
+<li>one language to rule them all</li>
+<li>after learning F# it's <strong>really</strong> easy to use!</li>
+<li>rich template with plenty options</li>
+<li>development experience taken to the next level</li>
+<li>Microsoft involvement</li>
+<li>community &amp; commercial support</li>
+</ul>
+</section>
+<section >
+<img src="images/safe_top.png" style="background: transparent; border: none; box-shadow: none"  />
+<h2>what's more?</h2>
+<ul>
+<li><a href="https://safe-stack.github.io/docs/feature-clientserver/">Sharing code</a> between Server and Client</li>
+<li><a href="https://safe-stack.github.io/docs/feature-debugging/">Full Stack Debugging in VS Code</a></li>
+<li><a href="https://safe-stack.github.io/docs/feature-ssr/">Server-Side Rendering</a> - Back-end React</li>
+<li><a href="https://www.thoughtworks.com/radar/languages-and-frameworks/safe-stack">ThoughtWorks Technology radar</a></li>
+<li>Number of podcasts and <a href="https://safe-stack.github.io/docs/events/">events</a> appearances</li>
+<li>...</li>
+</ul>
+</section>
+<section >
+<img src="images/safe_top.png" style="background: transparent; border: none; box-shadow: none"  />
+<h2>resources</h2>
+<ul>
+<li><a href="https://safe-stack.github.io/docs/">Docs</a> - SAFE in a nutshell</li>
+<li><a href="https://github.com/SAFE-Stack/SAFE-template/">Template</a> - dotnet template (&gt;23K NuGet downloads)</li>
+<li>Deep dive demo from <a href="https://skillsmatter.com/skillscasts/11308-safe-apps-with-f-web-stack">F# eXchange '18</a> (video)</li>
+<li>
+Sample apps
+<ul>
+<li><a href="https://github.com/SAFE-Stack/SAFE-BookStore">BookStore</a> - More complex + tests</li>
+<li><a href="https://github.com/SAFE-Stack/SAFE-Nightwatch">Nightwatch</a> - React Native</li>
+<li><a href="https://github.com/SAFE-Stack/SAFE-Chat">Chat</a> - Akka.NET</li>
+<li><a href="https://github.com/SAFE-Stack/SAFE-ConfPlanner">ConfPlanner</a> - CQRS + Event-Sourcing</li>
+</ul>
+</li>
+</ul>
+<p>Slides: <a href="https://theimowski.com/talk-full-stack-web-in-fsharp">https://theimowski.com/talk-full-stack-web-in-fsharp</a></p>
+</section>
+
+
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        // Add the nohighlight class and data-noescape attribute to code elements that have already been formatted by FSharp.Formatting
+        $('pre.highlighted code').addClass('nohighlight').attr('data-noescape', '');
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
+
+    </script>
+</body>
+</html>
+
