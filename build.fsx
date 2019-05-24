@@ -12,7 +12,7 @@
 let gitOwner = "theimowski"
 let gitHome = "https://github.com/" + gitOwner
 // The name of the project on GitHub
-let gitProjectName = "talk-safe-stack"
+let gitProjectName = "talk-full-stack-web-in-fsharp"
 
 open FsReveal
 open Fake
