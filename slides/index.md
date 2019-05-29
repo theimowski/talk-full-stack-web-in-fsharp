@@ -12,7 +12,7 @@
 
 Tomasz Heimowski 
 
-http://theimowski.com
+https://theimowski.com
 
 <img src="images/twitter.png" style="width:48px; background: transparent; border: none; box-shadow: none"  />
 <img src="images/github.png" style="width:48px; background: transparent; border: none; box-shadow: none"  /> 
@@ -23,7 +23,7 @@ http://theimowski.com
 
 ## Full Stack Web
 
----
+***
 
 ## TODO MVC
 
@@ -117,7 +117,7 @@ https://azure.microsoft.com
 
 * **Cloud** provider
 
----
+***
 
 <img src="images/azure_square.png" style="width: 200px; background: white"  />
 <img src="images/google_cloud.png" style="width: 200px; background: white"  />
@@ -178,6 +178,7 @@ https://elmish.github.io
 * after learning F# it's **really** easy to use!
 * rich template with plenty options
 * development experience taken to the next level
+* Fable integrates nicely with JavaScript ecosystem
 * Microsoft involvement
 * community & commercial support
 
@@ -189,11 +190,11 @@ https://elmish.github.io
 ## what's more?
 
 * [Sharing code](https://safe-stack.github.io/docs/feature-clientserver/) between Server and Client
+* [Remote Devtools debugger](https://elmish.github.io/debugger/)
 * [Full Stack Debugging in VS Code](https://safe-stack.github.io/docs/feature-debugging/)
 * [Server-Side Rendering](https://safe-stack.github.io/docs/feature-ssr/) - Back-end React
 * [ThoughtWorks Technology radar](https://www.thoughtworks.com/radar/languages-and-frameworks/safe-stack)
 * Number of podcasts and [events](https://safe-stack.github.io/docs/events/) appearances
-* ...
 
 ***
 
@@ -203,14 +204,11 @@ https://elmish.github.io
 ## resources
 
 * [Docs](https://safe-stack.github.io/docs/) - SAFE in a nutshell
-* [Template](https://github.com/SAFE-Stack/SAFE-template/) - dotnet template (>23K NuGet downloads)
 * Deep dive demo from [F# eXchange '18](https://skillsmatter.com/skillscasts/11308-safe-apps-with-f-web-stack) (video)
-* Sample apps
-    * [BookStore](https://github.com/SAFE-Stack/SAFE-BookStore) - More complex + tests
-    * [Nightwatch](https://github.com/SAFE-Stack/SAFE-Nightwatch) - React Native
-    * [Chat](https://github.com/SAFE-Stack/SAFE-Chat) - Akka.NET
-    * [ConfPlanner](https://github.com/SAFE-Stack/SAFE-ConfPlanner) - CQRS + Event-Sourcing
-
-Slides: https://theimowski.com/talk-full-stack-web-in-fsharp
+* [GitHub SAFE Stack org](https://github.com/SAFE-Stack/)
+    * dotnet template (>23K NuGet downloads)
+    * various sample apps
+* Slides: https://theimowski.com/talk-full-stack-web-in-fsharp
+* Source code: https://github.com/theimowski/SAFE-TodoMVC
 
 ***
