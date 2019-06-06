@@ -160,7 +160,7 @@ http://fable.io
 https://elmish.github.io
 
 * **UI library**
-* inspired by Elm
+* Model - View - Update
 
 ***
 
