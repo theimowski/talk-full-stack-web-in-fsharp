@@ -179,8 +179,6 @@ https://elmish.github.io
 * rich template with plenty options
 * development experience taken to the next level
 * Fable integrates nicely with JavaScript ecosystem
-* Microsoft involvement
-* community & commercial support
 
 ***
 
@@ -193,8 +191,19 @@ https://elmish.github.io
 * [Remote Devtools debugger](https://elmish.github.io/debugger/)
 * [Full Stack Debugging in VS Code](https://safe-stack.github.io/docs/feature-debugging/)
 * [Server-Side Rendering](https://safe-stack.github.io/docs/feature-ssr/) - Back-end React
-* [ThoughtWorks Technology radar](https://www.thoughtworks.com/radar/languages-and-frameworks/safe-stack)
-* Number of podcasts and [events](https://safe-stack.github.io/docs/events/) appearances
+
+***
+
+## What about Blazor?
+
+|   | Fable | Blazor |
+|---|---|---|
+| Language | F# | C# (Razor) |
+| Runtime | JavaScript | Web Assembly (Mono) |
+| Interop | Directly (bindings) | via JavaScript |
+
+* ["Blazor WebAssembly is in preview for ASP.NET Core 3.1."](https://docs.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-3.0)
+* [Blazor GitHub wiki](https://github.com/aspnet/Blazor/wiki/FAQ)
 
 ***
 
@@ -206,7 +215,7 @@ https://elmish.github.io
 * [Docs](https://safe-stack.github.io/docs/) - SAFE in a nutshell
 * Deep dive demo from [F# eXchange '18](https://skillsmatter.com/skillscasts/11308-safe-apps-with-f-web-stack) (video)
 * [GitHub SAFE Stack org](https://github.com/SAFE-Stack/)
-    * dotnet template (>23K NuGet downloads)
+    * dotnet template (>32K NuGet downloads)
     * various sample apps
 * Slides: https://theimowski.com/talk-full-stack-web-in-fsharp
 * Source code: https://github.com/theimowski/SAFE-TodoMVC
